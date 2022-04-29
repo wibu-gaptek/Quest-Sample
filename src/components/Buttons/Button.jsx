@@ -1,12 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
-function Button({ label }) {
-  return <div className="text-red-500">{label}</div>;
+import style from "./Button.module.css";
+
+export function Button(props) {
+  return <button>{props.children}</button>;
 }
 
-Button.propTypes = {
-  label: PropTypes.string,
-};
-
-export default Button;
+Button.propTypes = HTMLButtonElement;
