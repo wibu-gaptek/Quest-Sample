@@ -1,7 +1,8 @@
 const path = require("path");
 const HtmlWebPackPlugins = require("html-webpack-plugin");
 
-module.exports = {
+module.exports = (env) => ({
+  mode: env.mode,
   entry: path.join(__dirname, "src", "index.js"),
   output: {
     path: path.resolve(__dirname, "build"),
@@ -23,6 +24,10 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader", "postcss-loader"],
+      },
     ],
   },
-};
+});
