@@ -1,8 +1,7 @@
 const path = require("path");
 const HtmlWebPackPlugins = require("html-webpack-plugin");
 
-module.exports = (env) => ({
-  mode: env.mode,
+module.exports = {
   entry: path.join(__dirname, "src", "index.js"),
   output: {
     path: path.resolve(__dirname, "build"),
@@ -30,4 +29,4 @@ module.exports = (env) => ({
       },
     ],
   },
-});
+};
