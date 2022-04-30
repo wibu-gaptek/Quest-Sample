@@ -8,9 +8,7 @@ function App() {
 
   return (
     <ThemeContextProvider {...{ theme, setTheme }}>
-      <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-        teatea
-      </button>
+      <></>
     </ThemeContextProvider>
   );
 }

@@ -6,6 +6,8 @@ module.exports = {
     colors: {
       purple: "#8167FF",
       rose: "#FE8888",
+      white: "#000",
+      dark: "#171717",
     },
     extend: {},
   },

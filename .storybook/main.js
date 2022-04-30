@@ -42,6 +42,12 @@ module.exports = {
       "node_modules",
     ];
 
+    config.module.rules.push({
+      test: /\.css$/,
+      use: ["css-loader?modules=true"],
+      include: path.resolve(__dirname, "../"),
+    });
+
     return config;
   },
 };
